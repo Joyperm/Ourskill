@@ -1,17 +1,17 @@
 ---
 name: our-postmortem
-description: Write the canonical engineering record of a fixed bug — root cause, mechanism, fix, validation, and how it slipped through. Engineer-audience, code identifiers welcome. Use after a debug session lands a fix, before closing the ticket. Trigger on /post-mortem, when the user says "write the post-mortem / postmortem / RCA / root cause analysis", "document this fix", "write up the root cause", "close out this bug with a writeup", or hands you a fixed-and-validated bug and asks for the writeup.
+description: Write the canonical engineering record of a fixed bug — root cause, mechanism, fix, validation, and how it slipped through. Engineer-audience, code identifiers welcome. Use after a debug session lands a fix, before closing the ticket. Trigger on /our-postmortem, when the user says "write the post-mortem / postmortem / RCA / root cause analysis", "document this fix", "write up the root cause", "close out this bug with a writeup", or hands you a fixed-and-validated bug and asks for the writeup.
 ---
 
 # Post-mortem
 
 The canonical engineering record of a bug fix. Written **after** debugging lands a real fix, **for** other engineers (and future-you, who will have forgotten everything in 6 months). Code identifiers are welcome here — this is the artifact that lets the next person recover the mental model fast.
 
-For the up-the-org version of this same content, hand the finished post-mortem to [`management-talk`](../../productivity/management-talk/SKILL.md). They compose: post-mortem owns the engineering truth, management-talk reframes it for leadership.
+For the up-the-org version of this same content, hand the finished post-mortem to `/our-mgmt-rewrite`. They compose: post-mortem owns the engineering truth, our-mgmt-rewrite reframes it for leadership.
 
 ## When to invoke
 
-- "/post-mortem"
+- "/our-postmortem"
 - "write the post-mortem / postmortem / RCA / root-cause analysis"
 - "document this fix" / "write up the root cause" / "close out this bug with a writeup"
 - After a debug session has clearly landed a fix, proactively offer to draft one.
@@ -94,7 +94,7 @@ If there are no action items, write *"None — the fix is sufficient and no clas
 
 ## Tone
 
-This is engineer-to-engineer. Different from `management-talk`:
+This is engineer-to-engineer. Different from `our-mgmt-rewrite`:
 
 - **Code identifiers are first-class.** `tadaLaunchPrepare`, `tada/prim.h::syncWaitPeer`, `scratchBuf`, commit SHAs, line numbers — keep them. The whole point is that future engineers can grep their way back to the change.
 - **Mechanism over narrative.** Walk the actual cause chain. Don't soften it into "a synchronization issue" — say which function skipped which event under which gate.
@@ -109,7 +109,7 @@ This is engineer-to-engineer. Different from `management-talk`:
 2. **Confirm where it goes** (default: JIRA comment on the source ticket). Other valid destinations: PR description, `docs/postmortems/<ticket>.md`, internal wiki page. The shape is the same — only the wrapping changes.
 3. **Produce the draft** as a single chat block.
 4. **Sign-off before posting.** If posting back to JIRA, show the exact ADF payload, wait for explicit *"post it"* / *"go ahead"* / *"yes,"* then `POST /rest/api/3/issue/<KEY>/comment`. Print-only output needs no approval.
-5. **Offer the management-talk handoff:** *"Want a leadership-flavored version? I can hand this to `management-talk`."* Don't do it automatically.
+5. **Offer the our-mgmt-rewrite handoff:** *"Want a leadership-flavored version? I can hand this to `our-mgmt-rewrite`."* Don't do it automatically.
 
 ## Worked example — Tada hang in dumbModel (JIRA-12345)
 
@@ -135,7 +135,7 @@ This is engineer-to-engineer. Different from `management-talk`:
 > - Doc update: Tada launch-fast-path invariants documented in `docs/launch_synchronization.md`. (Alex, PR #5752.)
 > - Related: audit other `numStreams == 1` fast-paths for the same class of bug. (Filed as JIRA-12347.)
 
-What this post-mortem does that the management-talk version didn't:
+What this post-mortem does that the our-mgmt-rewrite version didn't:
 
 - Names every code identifier (`tadaLaunchPrepare`, `scratchBuf`, `numStreams`, `handle->shared->deviceStream`).
 - Walks the cause chain end-to-end so the reader can grep their way to the offending lines.
@@ -148,7 +148,7 @@ What this post-mortem does that the management-talk version didn't:
 
 - **Refuse to draft without all four required inputs.** A post-mortem of a hypothesis is worse than no post-mortem.
 - **Never invent root cause, owner, validation runs, or action items.** If a section's facts aren't there, ask. Don't fill the gap with plausible prose.
-- **Never strip code identifiers** in the engineering record. They are the index. The leadership reframe is `management-talk`'s job, not yours.
+- **Never strip code identifiers** in the engineering record. They are the index. The leadership reframe is `our-mgmt-rewrite`'s job, not yours.
 - **Blameless.** Describe gaps and bugs, never people.
 - **State validation coverage honestly.** If you only tested one config, say so. Implying broader coverage is the failure mode that breeds repeat regressions.
 - **Get sign-off before posting to JIRA.** Print-only output needs no approval. Never post to non-JIRA destinations from this skill.
