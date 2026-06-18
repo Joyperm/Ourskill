@@ -23,12 +23,14 @@ Use this skill when the user asks to update their Ourskill library, check for ne
    - If a newer version is available, proceed to the installation step.
 
 4. **Update/Synchronize Skills**
-   - Since the repository is in the gathering phase (v0.0.x), perform a clean install (**Phase A** from the main documentation):
-     1. Retrieve the latest skill codebase from the remote repository (e.g., via `git pull` or temporary download).
-     2. Identify the installation paths for Claude Code (`~/.claude/skills/`) and Cursor (`~/.cursor/skills/`).
-     3. Scan all folders in these paths. Read the frontmatter `name:` in each `SKILL.md`. If it starts with `our-`, delete that folder.
-     4. Copy the newly fetched `our-*` folders into both installation paths.
-     5. Update the local `VERSION` file to match the remote version.
+   - Perform the update using a temporary directory to avoid leaving duplicate git repositories:
+     1. Create a temporary folder on the local machine.
+     2. Clone the remote repository into it (e.g., `git clone --depth 1 https://github.com/Joyperm/Ourskill.git temp_ourskill`).
+     3. Identify the user installation paths: Claude Code (`~/.claude/skills/`) and Cursor (`~/.cursor/skills/`).
+     4. Delete all existing folders in those target paths whose `SKILL.md` frontmatter `name:` starts with `our-`.
+     5. Copy the new `our-*` folders from the cloned `skills/` directory into both installation paths.
+     6. Copy/write the remote `VERSION` file to the installation directories to update the local version.
+     7. **Clean up**: Delete the temporary folder completely.
 
 5. **Prompt Reload**
    - Notify the user of the successful update and ask them to reload Cursor or restart Claude Code.
