@@ -16,8 +16,7 @@ When invoked, reply with a short confirmation that includes:
 2. Which tool you are running in (Claude Code or Cursor), if you can tell.
 3. The path this skill was loaded from, if determinable
    (e.g. `~/.claude/skills/our-hello` or `~/.cursor/skills/our-hello`).
-4. A one-line reminder: edit skills in the central `Ourskill` repo, then re-run
-   `scripts/install.ps1` (central machine) or the bootstrap one-liner (other
-   machines).
+4. A one-line reminder: edit skills in the central `Ourskill` repo, then ask the
+   AI agent to sync/update (e.g. using the `/our-skill-update` command).
 
 Keep the reply to a few lines. This skill exists only to verify installation.
