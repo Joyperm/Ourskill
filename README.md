@@ -6,8 +6,8 @@ All skills are called via the prefix **`/our-`**, for example: `/our-hello`.
 
 > **No installation script** — managed entirely through AI agents (Claude Code / Cursor).
 > The agent reads the "Instructions for AI agent" section below and handles copying, deleting, and updating paths automatically.
->
-> 👉 For full details and sources of each skill, see **[SKILLS.md](SKILLS.md)**.
+
+👉 For full details and sources of each skill, see **[SKILLS.md](SKILLS.md)**.
 
 ---
 
@@ -148,12 +148,16 @@ clean_ours() {
 
 ---
 
-## Installing on Other Machines
+## Installing on Other Machines / Offline Setup
 
-To set up Ourskill on a new machine:
+To set up Ourskill on a new machine safely without accidental push risks:
 
 1. Clone the repository:
    ```bash
    git clone https://github.com/Joyperm/Ourskill.git
    ```
-2. Instruct your local agent (Claude Code or Cursor) to install it by running **Phase A** (clean slate) from this directory. Once installed, the cloned folder is no longer needed and can be deleted.
+2. **Remove the git remote** from the cloned folder to turn it into a purely local-only repository (preventing accidental pushes back to the central repository):
+   ```bash
+   git remote remove origin
+   ```
+3. Instruct your local agent (Claude Code or Cursor) to install the skills by running **Phase A** (clean slate) from this directory. Once installed, the cloned folder can be deleted.
