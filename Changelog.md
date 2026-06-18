@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial collection of 26 utility, setup, fullstack, engineering, self-dev, and productivity skills for Claude Code and Cursor.
 - Added new utility meta-skills `/our-skill-update` and `/our-skill-uninstall` to automate skill management.
 - Project documentation (`README.md` and `SKILLS.md`) translated to English for international usage.
+- Added 7 full-stack skills (from wshobson/agents + spencerpauly/awesome-cursor-skills): `/our-api-design`, `/our-error-handling`, `/our-secrets`, `/our-sql-optimize`, `/our-audit-perf`, `/our-e2e-tests`, plus the `/our-skill-autoread` skill router — total 33 skills, still v0.0.1 (not yet used in production).
 
 ### Fixed
 - Updated `skills/our-hello/SKILL.md` to remove outdated references to `scripts/install.ps1` and `bootstrap one-liner`, aligning with the AI-agent-managed installation workflow.

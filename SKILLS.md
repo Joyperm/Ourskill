@@ -10,7 +10,7 @@ For installation/update instructions, see [README.md](README.md) ("Instructions 
 
 ---
 
-## Skill List (26)
+## Skill List (33)
 
 | Command | What it does | Category | Source |
 |---------|--------------|----------|--------|
@@ -40,6 +40,13 @@ For installation/update instructions, see [README.md](README.md) ("Instructions 
 | `/our-save-context` | Save research/decisions/lessons learned into a workspace file for cross-session context | self-dev | spencerpauly |
 | `/our-adr` | Record Architecture Decision Records: context, options, rationale | self-dev | spencerpauly |
 | `/our-cheer` | Provide context-aware encouragement and perspective without being generic or using templates | motivation | local |
+| `/our-api-design` | REST/GraphQL design principles — resources, versioning, pagination, error formats | fullstack | wshobson |
+| `/our-error-handling` | Error-handling patterns — exceptions vs Result types, propagation, graceful degradation | fullstack | wshobson |
+| `/our-secrets` | Secure secrets/credentials management for CI/CD (Vault, AWS/Azure/GCP, GitHub Actions) | setup | wshobson |
+| `/our-sql-optimize` | SQL query optimization — EXPLAIN analysis, indexing strategies, fixing slow queries | fullstack | wshobson |
+| `/our-audit-perf` | Audit & optimize performance — bundle size, rendering, data fetching, Core Web Vitals | fullstack | spencerpauly |
+| `/our-e2e-tests` | Set up Playwright end-to-end testing — config, smoke test, CI integration | fullstack | spencerpauly |
+| `/our-skill-autoread` | Skill router — match the current task to the right /our-* skill so you don't have to remember them all | utility | local |
 
 <!--
 Add new rows to the bottom of the table using this format:
@@ -55,9 +62,10 @@ Add new rows to the bottom of the table using this format:
 | Source key | Repository / Origin |
 |------------|---------------------|
 | `spencerpauly` | github.com/spencerpauly/awesome-cursor-skills |
+| `wshobson` | github.com/wshobson/agents |
 | `9arm-skills` | github.com/thananon/9arm-skills |
 | `local-adapted` | Adapted from local `AgentJoJoy/grill-me` to be generic |
-| `local` | Created locally in this repository (our-hello, our-cheer) |
+| `local` | Created locally in this repository (our-hello, our-cheer, our-skill-autoread) |
 
 > Once the skill set starts to stabilize, we will move to v0.1.0 + set up remote + start per-release changelogs (Phase B).
 > Other skill sources that have not yet been pulled are listed under "Other Skill Sources" in [README.md](README.md).

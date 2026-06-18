@@ -11,7 +11,7 @@ All skills are called via the prefix **`/our-`**, for example: `/our-hello`.
 
 ---
 
-## Current Skills — v0.0.1 (26 Skills)
+## Current Skills — v0.0.1 (33 Skills)
 
 > 🚧 Currently in the **gathering** phase — pulling skills from multiple sources, all pinned at **v0.0.1**.
 > Remote repo and detailed changelogs are not yet set up because currently "installation = clear all old ones + install new set" (Phase A). Incremental updates (Phase B) will be used when the skill set becomes stable and a remote repo is established.
@@ -19,10 +19,10 @@ All skills are called via the prefix **`/our-`**, for example: `/our-hello`.
 > 👉 For full descriptions and sources of each skill, see **[SKILLS.md](SKILLS.md)**.
 
 **setup — Project Setup**
-`/our-add-auth` · `/our-add-docker` · `/our-setup-ci` · `/our-db-design` · `/our-ui-stack`
+`/our-add-auth` · `/our-add-docker` · `/our-setup-ci` · `/our-db-design` · `/our-ui-stack` · `/our-secrets`
 
 **fullstack — Development**
-`/our-write-tests` · `/our-commit-msg` · `/our-create-pr` · `/our-audit-security` · `/our-update-npm` · `/our-css-to-tailwind`
+`/our-write-tests` · `/our-commit-msg` · `/our-create-pr` · `/our-audit-security` · `/our-update-npm` · `/our-css-to-tailwind` · `/our-api-design` · `/our-error-handling` · `/our-audit-perf` · `/our-e2e-tests` · `/our-sql-optimize`
 
 **engineering — Debugging / Code Review / Comprehension**
 `/our-debug` · `/our-postmortem` · `/our-review` · `/our-onboard-codebase`
@@ -31,7 +31,7 @@ All skills are called via the prefix **`/our-`**, for example: `/our-hello`.
 `/our-prompting` · `/our-skill-from-pattern` · `/our-save-context` · `/our-adr` · `/our-mgmt-rewrite` · `/our-stay-on-track`
 
 **planning / motivation / utility**
-`/our-grill-me` · `/our-cheer` · `/our-hello` · `/our-skill-update` · `/our-skill-uninstall`
+`/our-grill-me` · `/our-cheer` · `/our-hello` · `/our-skill-update` · `/our-skill-uninstall` · `/our-skill-autoread`
 
 ---
 
