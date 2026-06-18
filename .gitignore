@@ -1,0 +1,9 @@
+# OS / editor cruft
+Thumbs.db
+.DS_Store
+*.swp
+*~
+
+# local-only temp (e.g. throwaway clones, scratch)
+.cache/
+tmp/
