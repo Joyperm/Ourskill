@@ -7,6 +7,8 @@ description: Add authentication to a web application using NextAuth.js (Auth.js)
 
 Use this skill when the user asks to add authentication, login, sign-up, OAuth, or session management.
 
+> ⚠️ **Secrets safety:** Before creating or editing any `.env`, secrets, or credentials file (OAuth client IDs/secrets, session keys), tell the user how you will handle it and wait for confirmation — write placeholders to `.env.example` (never real values in tracked files), ensure `.env` is in `.gitignore`, and never print or commit real secret values.
+
 ## Steps
 
 1. **Install dependencies**

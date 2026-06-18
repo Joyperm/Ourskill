@@ -7,6 +7,8 @@ description: Implement secure secrets management for CI/CD pipelines using Vault
 
 Secure secrets management practices for CI/CD pipelines using Vault, AWS Secrets Manager, and other tools.
 
+> ⚠️ **Secrets safety:** Before creating or editing any `.env`, secrets, or credentials file, tell the user how you will handle it and wait for confirmation — write placeholders to `.env.example` (never real values in tracked files), ensure `.env` is in `.gitignore`, and never print or commit real secret values.
+
 ## Purpose
 
 Implement secure secrets management in CI/CD pipelines without hardcoding sensitive information.

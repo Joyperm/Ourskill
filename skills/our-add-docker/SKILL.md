@@ -7,6 +7,8 @@ description: Dockerize an application with a production-ready Dockerfile, docker
 
 Use this skill when the user asks to dockerize, containerize, or add Docker support to an application.
 
+> ⚠️ **Secrets safety:** Never bake secrets into the image. Before handling any `.env`, build args, or credentials, tell the user how you will handle it and wait for confirmation — pass secrets at runtime (env vars / `--env-file` / Docker secrets), never via `ENV`/`ARG` for real values in a committed Dockerfile, keep `.env` in both `.gitignore` and `.dockerignore`, and never print or commit real secret values.
+
 ## Steps
 
 1. **Detect the runtime** — inspect `package.json`, `requirements.txt`, `go.mod`, `Cargo.toml`, etc. to determine the language and runtime.

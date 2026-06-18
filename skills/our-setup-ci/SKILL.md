@@ -7,6 +7,8 @@ description: Set up a GitHub Actions CI/CD pipeline with linting, testing, type-
 
 Use this skill when the user asks to set up CI, continuous integration, a build pipeline, or GitHub Actions.
 
+> ⚠️ **Secrets safety:** CI needs secrets (tokens, deploy keys, registry creds). Before adding any secret, tell the user how you will handle it and wait for confirmation — reference them as repository/CI secrets (e.g. `${{ secrets.NAME }}`), never hardcode real values in the workflow file, and never print or commit real secret values.
+
 ## Steps
 
 1. **Detect the project structure** — check for `package.json` (Node.js), `requirements.txt` / `pyproject.toml` (Python), `go.mod` (Go), or monorepo tools like Turborepo.
