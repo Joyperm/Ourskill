@@ -10,12 +10,12 @@ Use this skill when the user asks to update their Ourskill library, check for ne
 
 1. **Locate the Remote Repository URL**
    - Inspect the current directory's Git configuration (`git remote get-url origin`).
-   - If not found or if running outside the repository, ask the user for the Git remote URL (or fallback to the known central repository URL).
+   - If not found or if running outside the repository, use the central repository URL: `https://github.com/Joyperm/Ourskill.git`.
 
 2. **Fetch the Remote Version**
    - Check the remote repository's `VERSION` file (or `Changelog.md`).
    - If using git, run `git fetch` and compare the local branch to `origin/master` (or the default branch).
-   - If running as a standalone folder outside Git, fetch the `VERSION` file directly from the raw Git host URL (e.g., GitHub, GitLab) of the repository.
+   - If running as a standalone folder outside Git, fetch the `VERSION` file directly from the raw Git URL: `https://raw.githubusercontent.com/Joyperm/Ourskill/master/VERSION`.
 
 3. **Compare Versions**
    - Read the local version from the `VERSION` file in the installation directory.
