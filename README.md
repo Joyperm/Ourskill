@@ -84,7 +84,8 @@ Skills are invoked based on the `name:` value in the frontmatter. Therefore, all
 | Scenario | Step to Use | What to Do |
 |----------|-------------|------------|
 | New machine / First installation (or cluttered with old `/our-` skills) | **A** (One-time) | Recursively find and delete all old `our-*` skills, then clean install the entire set. |
-| Already installed, with modified/new/deleted skills | **B** (Incremental) | Modify **only** the changed skills, leaving other skills untouched. |
+| Regular update / Sync with remote | **`/our-skill-update`** | Run `/our-skill-update` to automatically fetch changes from the remote repository and update local skills. |
+| Specific manual update (modified/new/deleted skills) | **B** (Incremental) | Modify **only** the changed skills, leaving other skills untouched. |
 
 > 💡 The recursive cleanup based on `name:` (Phase A, Step 2) is **only used during onboarding/first-time install** to clean up old legacy files. Once onboarding is complete, all skills will reside in standard `our-<name>` folders, so subsequent updates can use **Phase B** directly to overwrite folders, without needing recursive lookup.
 
@@ -147,15 +148,12 @@ clean_ours() {
 
 ---
 
-## Next Steps (Not Yet Implemented)
+## Installing on Other Machines
 
-Initialize git after the first skill set is ready:
+To set up Ourskill on a new machine:
 
-```bash
-git init
-git add .
-git commit -m "Initial our-* skill set"
-# Then add remote / set up PR workflow later
-```
-
-On other machines: have the agent `git clone` this repository, then run Phase **A** (Throwaway: the cloned folder can be deleted after copy since skills are copied into local directories).
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Joyperm/Ourskill.git
+   ```
+2. Instruct your local agent (Claude Code or Cursor) to install it by running **Phase A** (clean slate) from this directory. Once installed, the cloned folder is no longer needed and can be deleted.
