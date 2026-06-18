@@ -7,6 +7,8 @@ description: Perform a systematic security audit of a codebase, checking for OWA
 
 Use this skill when the user asks to audit security, check for vulnerabilities, review code for security issues, or harden an application.
 
+> ⚠️ **Secrets safety:** This audit surfaces real secrets. Report only the **location** (file + line) and **type** — never print the actual secret value in chat, logs, or the report, and never commit it. Recommend rotating any exposed secret and moving it to `.env` / a secrets manager.
+
 ## Steps
 
 1. **Scan for hardcoded secrets** — search for API keys, tokens, passwords, and connection strings in source files. Check for patterns like:
