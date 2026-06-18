@@ -8,5 +8,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.0.1] - 2026-06-18
 
 ### Added
-- Initial collection of 24 utility, setup, fullstack, engineering, self-dev, and productivity skills for Claude Code and Cursor.
+- Initial collection of 26 utility, setup, fullstack, engineering, self-dev, and productivity skills for Claude Code and Cursor.
+- Added new utility meta-skills `/our-skill-update` and `/our-skill-uninstall` to automate skill management.
 - Project documentation (`README.md` and `SKILLS.md`) translated to English for international usage.

@@ -10,11 +10,13 @@ For installation/update instructions, see [README.md](README.md) ("Instructions 
 
 ---
 
-## Skill List (24)
+## Skill List (26)
 
 | Command | What it does | Category | Source |
 |---------|--------------|----------|--------|
 | `/our-hello` | Check that the `our-*` skill pipeline is installed and working correctly | utility | local |
+| `/our-skill-update` | Check remote version and update installed skills | utility | local |
+| `/our-skill-uninstall` | Uninstall all personal skills from local machine | utility | local |
 | `/our-debug` | 4-step debugging discipline: reproduce → trace → falsify → cross-reference | engineering | 9arm-skills |
 | `/our-postmortem` | Write a Root Cause Analysis (RCA) / post-mortem after fixing a bug | engineering | 9arm-skills |
 | `/our-review` | Review a plan/PR/code from an outsider's perspective — question intent + trace code paths | engineering | 9arm-skills |
