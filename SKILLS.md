@@ -35,7 +35,7 @@ For installation/update instructions, see [README.md](README.md) ("Instructions 
 | `/our-audit-security` | Systematically audit security: OWASP Top 10, secret leaks, risky patterns | fullstack | spencerpauly |
 | `/our-update-npm` | Safely update npm packages (separate minor/major updates + handle migrations) | fullstack | spencerpauly |
 | `/our-css-to-tailwind` | Convert CSS rules into Tailwind utility classes | fullstack | spencerpauly |
-| `/our-prompting` | Write prompts for LLMs: structure, few-shot, CoT, system prompts | self-dev | spencerpauly |
+| `/our-prompting` | Write prompts for LLMs: named frameworks (CO-STAR/RTF/APE…) + structure, few-shot, CoT, system prompts, output parsing | self-dev | spencerpauly·local |
 | `/our-skill-from-pattern` | Identify repeated workflows → automatically convert them into a new SKILL.md | self-dev | spencerpauly |
 | `/our-save-context` | Save research/decisions/lessons learned into a workspace file for cross-session context | self-dev | spencerpauly |
 | `/our-adr` | Record Architecture Decision Records: context, options, rationale | self-dev | spencerpauly |
