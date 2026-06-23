@@ -23,7 +23,10 @@ path is wrong: consumer machines delete the cloned repo and only keep the
    - Claude Code → `~/.claude/skills/`
    - Cursor → `~/.cursor/skills/`
 
-Skip `our-skill-autoread` itself and any non-`our-*` skill.
+Skip `our-skill-autoread` itself and any non-`our-*` skill. Include `our-adv-*`
+skills — they are this machine's local "advanced" tier (often stack-specific
+experts) and are frequently the most precise match for a task on that stack, so
+prefer them when their `description:` fits more tightly than a basic skill's.
 
 ## What to do
 

@@ -27,7 +27,8 @@ Use this skill when the user asks to update their Ourskill library, check for ne
      1. Create a temporary folder on the local machine.
      2. Clone the remote repository into it (e.g., `git clone --depth 1 https://github.com/Joyperm/Ourskill.git temp_ourskill`).
      3. Identify the user installation paths: Claude Code (`~/.claude/skills/`) and Cursor (`~/.cursor/skills/`).
-     4. Delete all existing folders in those target paths whose `SKILL.md` frontmatter `name:` starts with `our-`.
+     4. Delete all existing folders in those target paths whose `SKILL.md` frontmatter `name:` starts with `our-` **except** any whose `name:` starts with `our-adv-`.
+        - ⚠️ **Never touch `our-adv-*` skills.** They are the machine-local "advanced" tier — created on this specific machine (e.g. stack experts), never pushed to the central repo, and **not recoverable** from it. The sweep here only manages the central/basic library; `our-adv-*` belongs to this machine and must survive every update.
      5. Copy the new `our-*` folders from the cloned `skills/` directory into both installation paths.
      6. Copy/write the remote `VERSION` file to the installation directories to update the local version.
      7. **Clean up**: Delete the temporary folder completely.

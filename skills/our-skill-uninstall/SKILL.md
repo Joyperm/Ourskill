@@ -17,9 +17,10 @@ Use this skill when the user explicitly requests to uninstall all personal skill
    - Perform the cleanup logic for both directories:
      1. Search for all `SKILL.md` files recursively within both directories.
      2. Read the frontmatter `name:` field of each file.
-     3. If the `name:` starts with `our-`, delete the parent folder containing that `SKILL.md` file.
+     3. If the `name:` starts with `our-` **but NOT `our-adv-`**, delete the parent folder containing that `SKILL.md` file.
      4. Do NOT touch any skill folder where the `name:` does not start with `our-`.
-     5. Do NOT touch the `~/.cursor/skills-cursor/` directory.
+     5. ⚠️ Do NOT touch `our-adv-*` skills. They are the machine-local "advanced" tier — created on this machine, never pushed to the central repo, and **not recoverable** from it. Uninstalling the central library must NOT silently delete machine-owned work. If the user truly wants those gone too, tell them which `our-adv-*` skills exist and have them confirm deleting each one explicitly.
+     6. Do NOT touch the `~/.cursor/skills-cursor/` directory.
 
 3. **Prune Empty Directories**
    - Traverse the target directories and delete any subdirectories that are empty after the cleanup.

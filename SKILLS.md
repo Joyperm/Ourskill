@@ -10,7 +10,7 @@ For installation/update instructions, see [README.md](README.md) ("Instructions 
 
 ---
 
-## Skill List (33)
+## Skill List (34)
 
 | Command | What it does | Category | Source |
 |---------|--------------|----------|--------|
@@ -47,11 +47,18 @@ For installation/update instructions, see [README.md](README.md) ("Instructions 
 | `/our-audit-perf` | Audit & optimize performance — bundle size, rendering, data fetching, Core Web Vitals | fullstack | spencerpauly |
 | `/our-e2e-tests` | Set up Playwright end-to-end testing — config, smoke test, CI integration | fullstack | spencerpauly |
 | `/our-skill-autoread` | Skill router — match the current task to the right /our-* skill so you don't have to remember them all | utility | local |
+| `/our-stack-expert` | Build a machine-local `our-adv-<stack>` expert skill (pull from a source repo if one exists, else generate) — installed locally only, never synced/overwritten | utility | local |
 
 <!--
 Add new rows to the bottom of the table using this format:
 | `/our-<name>` | <short description> | <category> | <local | spencerpauly | 9arm-skills | local-adapted> |
 -->
+
+> **Note — `our-adv-*` skills are not listed here.** They are a **machine-local**
+> "advanced" tier (e.g. stack experts built by `/our-stack-expert`): created on one
+> machine, never pushed, and protected from `/our-skill-update` /
+> `/our-skill-uninstall`. This catalog only tracks the shared/basic library. See
+> "Skill Tiers" in [README.md](README.md).
 
 ---
 

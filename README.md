@@ -11,7 +11,7 @@ All skills are called via the prefix **`/our-`**, for example: `/our-hello`.
 
 ---
 
-## Current Skills — v0.0.1 (33 Skills)
+## Current Skills — v0.0.1 (34 Skills)
 
 > 🚧 Currently in the **gathering** phase — pulling skills from multiple sources, all pinned at **v0.0.1**.
 > Remote repo and detailed changelogs are not yet set up because currently "installation = clear all old ones + install new set" (Phase A). Incremental updates (Phase B) will be used when the skill set becomes stable and a remote repo is established.
@@ -31,7 +31,7 @@ All skills are called via the prefix **`/our-`**, for example: `/our-hello`.
 `/our-prompting` · `/our-skill-from-pattern` · `/our-save-context` · `/our-adr` · `/our-mgmt-rewrite` · `/our-stay-on-track`
 
 **planning / motivation / utility**
-`/our-grill-me` · `/our-cheer` · `/our-hello` · `/our-skill-update` · `/our-skill-uninstall` · `/our-skill-autoread`
+`/our-grill-me` · `/our-cheer` · `/our-hello` · `/our-skill-update` · `/our-skill-uninstall` · `/our-skill-autoread` · `/our-stack-expert`
 
 ---
 
@@ -77,6 +77,29 @@ Skills are invoked based on the `name:` value in the frontmatter. Therefore, all
 
 ---
 
+## Skill Tiers — Basic vs Advanced (machine-local)
+
+Each machine can hold two kinds of `/our-` skills:
+
+| Tier | Prefix | Owned by | Pushed to central repo? | `/our-skill-update` & `/our-skill-uninstall` |
+|------|--------|----------|-------------------------|----------------------------------------------|
+| **Basic** | `our-<name>` | the central library | yes — synced to every machine | **managed**: replaced/removed on sync |
+| **Advanced** | `our-adv-<name>` | **this machine only** | **no** — never leaves the machine | **protected**: never touched |
+
+**Advanced skills (`our-adv-*`)** are for needs that differ per machine — e.g. a
+work machine that wants a stack-specific expert (`our-adv-nextjs`,
+`our-adv-django`). They are created locally on that machine, **never pushed**, and
+the sweep in `/our-skill-update` and `/our-skill-uninstall` deliberately **skips
+anything whose `name:` starts with `our-adv-`**. So upgrading the central library
+never deletes or overwrites a machine's own advanced skills.
+
+> ⚠️ Because `our-adv-*` skills live only on the machine that created them, they
+> are **not recoverable** from the central repo. Keep your own backup if they
+> matter. The protection means an update won't wipe them — it doesn't mean they're
+> stored anywhere else.
+
+---
+
 ## 📋 Instructions for AI Agent
 
 > This section is written for the **AI agent to read and follow**. The user only needs to command, e.g., "install all skills on this machine" or "update our-foo", and the agent will execute the steps below.
@@ -94,9 +117,9 @@ Skills are invoked based on the `name:` value in the frontmatter. Therefore, all
 Perform these steps for **both** target directories: `~/.claude/skills/` and `~/.cursor/skills/`
 
 1. Create the target directory if it does not exist.
-2. **Find "our skills" using `name:` in the frontmatter (not the folder name)** by scanning all `SKILL.md` files recursively (including subfolders). If the `name:` starts with `our-`, delete the directory containing that file. Afterwards, prune empty folders in the target directory.
+2. **Find "our skills" using `name:` in the frontmatter (not the folder name)** by scanning all `SKILL.md` files recursively (including subfolders). If the `name:` starts with `our-` **but NOT `our-adv-`**, delete the directory containing that file. Afterwards, prune empty folders in the target directory.
    - ⚠️ Check by `name:` only — folders with different names or nested inside subfolders must still be caught.
-   - Do not touch skills whose `name:` does not start with `our-`, and do not touch `~/.cursor/skills-cursor`.
+   - Do not touch skills whose `name:` does not start with `our-`, **never touch `our-adv-*` (machine-local advanced tier, see "Skill Tiers" above)**, and do not touch `~/.cursor/skills-cursor`.
 3. Copy all `skills/our-*` folders from this repository to both target directories.
 4. Prompt the user to reload Cursor / restart Claude Code.
 
@@ -116,12 +139,16 @@ Then prompt the user to reload their tools.
 > This is not a script that must be executed directly — it is an example for the agent to adapt based on the operating system of the target machine. (Phase B does not require this; it simply overwrites/deletes the `our-<name>` directory directly).
 
 ```bash
-# Delete all skills in $target (recursive) where frontmatter name starts with our-, then prune empty directories
+# Delete all skills in $target (recursive) where frontmatter name starts with our-
+# EXCEPT the machine-local our-adv-* tier, then prune empty directories
 clean_ours() {
   local target="$1"; [ -d "$target" ] || return 0
   find "$target" -type f -iname 'SKILL.md' | while IFS= read -r f; do
     name=$(grep -m1 '^name:' "$f" | sed -E 's/^name:[[:space:]]*//; s/[[:space:]"'"'"']*$//')
-    case "$name" in our-*) rm -rf "$(dirname "$f")";; esac
+    case "$name" in
+      our-adv-*) ;;                              # protected: machine-local advanced tier
+      our-*) rm -rf "$(dirname "$f")";;
+    esac
   done
   find "$target" -mindepth 1 -type d -empty -delete
 }
