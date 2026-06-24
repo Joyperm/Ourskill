@@ -7,9 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-> Accumulating changes since 0.0.1 (already installed on another machine). VERSION
-> stays `0.0.1` until these ship together as `0.0.2`, which `/our-skill-update`
-> will detect and roll out to consumer machines.
+## [0.0.2] - 2026-06-23
 
 ### Added
 - **Machine-local `our-adv-*` tier**: a protected namespace for advanced, machine-specific skills (e.g. stack experts) that are created on one machine, never pushed, and **never touched** by `/our-skill-update` or `/our-skill-uninstall`. The recursive sweep (Phase A, update, uninstall) now skips any `name:` starting with `our-adv-`. `/our-skill-autoread` includes them and prefers them when they match a task more tightly. Documented under "Skill Tiers" in README.

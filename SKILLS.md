@@ -1,4 +1,4 @@
-# Ourskill — Skill Directory (v0.0.1)
+# Ourskill — Skill Directory (v0.0.2)
 
 Choose the desired skill from this table and invoke it using the command in the **Command** column.
 For full details on each skill, read `skills/<name>/SKILL.md`.
@@ -66,7 +66,8 @@ Add new rows to the bottom of the table using this format:
 
 ## Versions & Sources
 
-**v0.0.1** — Initial gathering set (see [VERSION](VERSION))
+**v0.0.2** — `our-adv-*` machine-local tier + `/our-stack-expert`, `/our-test-driven`, `/our-audit-arch`; prompting frameworks merge; secrets-safety notes; audit fixes (see [VERSION](VERSION))
+**v0.0.1** — Initial gathering set
 
 | Source key | Repository / Origin |
 |------------|---------------------|
