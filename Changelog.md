@@ -7,7 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Changed (v0.0.3 — skill naming system overhaul)
+## [0.0.3] - 2026-06-24
+
+### Changed (skill naming system overhaul)
 
 Rename all skills to a consistent `our-<category>-<action>` pattern so the
 command itself signals the category. `our-skill-*`, `our-hello`, and

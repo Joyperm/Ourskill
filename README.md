@@ -11,7 +11,7 @@ All skills are called via the prefix **`/our-`**, for example: `/our-hello`.
 
 ---
 
-## Current Skills — v0.0.2 (36 Skills)
+## Current Skills — v0.0.3 (36 Skills)
 
 > 👉 For full descriptions and sources of each skill, see **[SKILLS.md](SKILLS.md)**.
 
