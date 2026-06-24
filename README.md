@@ -44,6 +44,7 @@ Sources surveyed but not yet pulled:
 - [jeffallan/claude-skills](https://github.com/jeffallan/claude-skills) — 66 full-stack framework-specific skills (React / NestJS / DevOps Expert).
 - [VoltAgent/awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills) · [wshobson/agents](https://github.com/wshobson/agents) — large collection from actual teams.
 - [karanb192/awesome-claude-skills](https://github.com/karanb192/awesome-claude-skills) · [travisvn/awesome-claude-skills](https://github.com/travisvn/awesome-claude-skills) — curated list (TDD / debug / git / productivity).
+- [mattpocock/skills](https://github.com/mattpocock/skills) — very popular "engineering discipline" skills that make the agent **less reckless** rather than smarter. Notable: `/grill-me` (interview before building — we already adapted this as `/our-grill-me`), a shared-language `CONTEXT.md` convention, `/tdd` (red-green-refactor), and `/improve-codebase-architecture` (scan project → report on architecture drift). Good candidate to review for ideas to consolidate into our existing skills.
 
 > ⚠️ When selecting from these sources, be careful with skills that rely on Cursor-specific browsers or hooks, as they will not work in Claude Code.
 
