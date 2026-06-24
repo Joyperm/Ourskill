@@ -13,9 +13,6 @@ All skills are called via the prefix **`/our-`**, for example: `/our-hello`.
 
 ## Current Skills — v0.0.2 (36 Skills)
 
-> 🚧 Currently in the **gathering** phase — pulling skills from multiple sources, all pinned at **v0.0.1**.
-> Remote repo and detailed changelogs are not yet set up because currently "installation = clear all old ones + install new set" (Phase A). Incremental updates (Phase B) will be used when the skill set becomes stable and a remote repo is established.
->
 > 👉 For full descriptions and sources of each skill, see **[SKILLS.md](SKILLS.md)**.
 
 **setup — Project Setup**

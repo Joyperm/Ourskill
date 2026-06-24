@@ -5,9 +5,6 @@ For full details on each skill, read `skills/<name>/SKILL.md`.
 
 For installation/update instructions, see [README.md](README.md) ("Instructions for AI Agent" section).
 
-> 🚧 **Gathering Phase (v0.0.x):** Currently pulling skills from multiple sources — all pinned at **v0.0.1**.
-> Remote repo and detailed changelogs are not yet set up because currently "installation = clear all old ones + install new set (Phase A)". Incremental updates (Phase B) will be used when the skill set becomes stable and a remote repo is established.
-
 ---
 
 ## Skill List (36)
@@ -75,7 +72,18 @@ Add new rows to the bottom of the table using this format:
 | `wshobson` | github.com/wshobson/agents |
 | `9arm-skills` | github.com/thananon/9arm-skills |
 | `local-adapted` | Adapted from local `AgentJoJoy/grill-me` to be generic |
-| `local` | Created locally in this repository (our-hello, our-cheer, our-skill-autoread) |
+| `local` | Created locally in this repository (our-hello, our-cheer, our-skill-autoread, our-test-driven, our-audit-arch, our-stack-expert) |
 
-> Once the skill set starts to stabilize, we will move to v0.1.0 + set up remote + start per-release changelogs (Phase B).
 > Other skill sources that have not yet been pulled are listed under "Other Skill Sources" in [README.md](README.md).
+
+---
+
+## Update Log
+
+> Record skills added, modified, or removed each release — used by Phase B (incremental update) to know which folders to sync.
+> Full descriptions and rationale for each change are in [Changelog.md](Changelog.md).
+
+| Version | Action | Skill |
+|---------|--------|-------|
+| 0.0.2 | Added | `/our-stack-expert`, `/our-test-driven`, `/our-audit-arch` |
+| 0.0.2 | Modified | `/our-prompting` (Named Frameworks merged), `/our-skill-update`, `/our-skill-uninstall`, `/our-skill-autoread`, `/our-skill-from-pattern`, `/our-secrets`, `/our-add-auth`, `/our-setup-ci`, `/our-add-docker`, `/our-audit-security`, `/our-debug`, `/our-review`, `/our-postmortem` |
