@@ -7,6 +7,51 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed (v0.0.3 — skill naming system overhaul)
+
+Rename all skills to a consistent `our-<category>-<action>` pattern so the
+command itself signals the category. `our-skill-*`, `our-hello`, and
+`our-setup-ci` are unchanged (already consistent).
+
+| Old name | New name | Category |
+|----------|----------|----------|
+| `our-debug` | `our-code-debug` | code |
+| `our-review` | `our-code-review` | code |
+| `our-postmortem` | `our-code-postmortem` | code |
+| `our-test-driven` | `our-code-tdd` | code |
+| `our-audit-arch` | `our-code-audit-arch` | code |
+| `our-onboard-codebase` | `our-code-onboard` | code |
+| `our-write-tests` | `our-dev-tests` | dev |
+| `our-e2e-tests` | `our-dev-e2e` | dev |
+| `our-commit-msg` | `our-dev-commit` | dev |
+| `our-create-pr` | `our-dev-pr` | dev |
+| `our-api-design` | `our-dev-api` | dev |
+| `our-error-handling` | `our-dev-errors` | dev |
+| `our-sql-optimize` | `our-dev-sql` | dev |
+| `our-css-to-tailwind` | `our-dev-tailwind` | dev |
+| `our-update-npm` | `our-dev-npm` | dev |
+| `our-audit-perf` | `our-dev-perf` | dev |
+| `our-audit-security` | `our-dev-security` | dev |
+| `our-add-auth` | `our-setup-auth` | setup |
+| `our-add-docker` | `our-setup-docker` | setup |
+| `our-db-design` | `our-setup-db` | setup |
+| `our-ui-stack` | `our-setup-ui` | setup |
+| `our-secrets` | `our-setup-secrets` | setup |
+| `our-prompting` | `our-prod-prompting` | prod |
+| `our-skill-from-pattern` | `our-prod-pattern` | prod |
+| `our-save-context` | `our-prod-context` | prod |
+| `our-adr` | `our-prod-adr` | prod |
+| `our-mgmt-rewrite` | `our-prod-mgmt` | prod |
+| `our-stay-on-track` | `our-prod-focus` | prod |
+| `our-grill-me` | `our-prod-grill` | prod |
+| `our-cheer` | `our-prod-cheer` | prod |
+| `our-stack-expert` | `our-skill-expert` | skill |
+
+> ⚠️ **Migration note for consumer machines:** rename = old `our-*` folders become
+> orphans that `/our-skill-update` won't clean up automatically (it only installs
+> new names). Phase A (clean slate) is required on each machine after this release
+> to remove the old names and install the new ones cleanly.
+
 ## [0.0.2] - 2026-06-23
 
 ### Added
