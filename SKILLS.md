@@ -1,4 +1,4 @@
-# Ourskill — Skill Directory (v0.0.3)
+# Ourskill — Skill Directory
 
 Choose the desired skill from this table and invoke it using the command in the **Command** column.
 For full details on each skill, read `skills/<name>/SKILL.md`.
@@ -7,7 +7,7 @@ For installation/update instructions, see [README.md](README.md) ("Instructions 
 
 ---
 
-## Skill List (36)
+## Skill List (37)
 
 | Command | What it does | Category | Source |
 |---------|--------------|----------|--------|
@@ -16,6 +16,7 @@ For installation/update instructions, see [README.md](README.md) ("Instructions 
 | `/our-skill-uninstall` | Uninstall all personal skills from local machine | utility | local |
 | `/our-skill-autoread` | Skill router — match the current task to the right /our-* skill so you don't have to remember them all | utility | local |
 | `/our-skill-expert` | Build a machine-local `our-adv-<stack>` expert skill (pull from a source repo if one exists, else generate) — installed locally only, never synced/overwritten | utility | local |
+| `/our-skill-doctor` | Health-check the install (frontmatter, folder↔name, dupes, tier inventory) + verify catalog↔folders↔version consistency when run inside the repo | utility | local |
 | `/our-code-debug` | 4-step debugging discipline: reproduce → trace → falsify → cross-reference | code | 9arm-skills |
 | `/our-code-review` | Review a plan/PR/code from an outsider's perspective — question intent + trace code paths | code | 9arm-skills |
 | `/our-code-postmortem` | Write a Root Cause Analysis (RCA) / post-mortem after fixing a bug | code | 9arm-skills |
@@ -63,7 +64,7 @@ Add new rows to the bottom of the table using this format:
 
 ## Versions & Sources
 
-**v0.0.3** — Full skill rename to `our-<category>-<action>` pattern (our-code-*, our-dev-*, our-setup-*, our-prod-*); consumer machines require Phase A on this update
+**v0.0.3** — Full skill rename to `our-<category>-<action>` pattern (our-code-*, our-dev-*, our-setup-*, our-prod-*); renames applied automatically by `/our-skill-update`
 **v0.0.2** — `our-adv-*` machine-local tier + `/our-skill-expert`, `/our-code-tdd`, `/our-code-audit-arch`; prompting frameworks merge; secrets-safety notes; audit fixes
 **v0.0.1** — Initial gathering set
 
@@ -86,6 +87,6 @@ Add new rows to the bottom of the table using this format:
 
 | Version | Action | Skill |
 |---------|--------|-------|
-| 0.0.3 | Renamed (31) | See Changelog `[Unreleased]` for full old→new table. Consumer machines require **Phase A** (clean slate) to remove old names. |
+| 0.0.3 | Renamed (31) | See Changelog `[0.0.3]` for the old→new table. Applied automatically by `/our-skill-update` (it clean-reinstalls every run). |
 | 0.0.2 | Added | `/our-stack-expert`, `/our-test-driven`, `/our-audit-arch` |
 | 0.0.2 | Modified | `/our-prompting` (Named Frameworks merged), `/our-skill-update`, `/our-skill-uninstall`, `/our-skill-autoread`, `/our-skill-from-pattern`, `/our-secrets`, `/our-add-auth`, `/our-setup-ci`, `/our-add-docker`, `/our-audit-security`, `/our-debug`, `/our-review`, `/our-postmortem` |

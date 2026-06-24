@@ -11,9 +11,10 @@ All skills are called via the prefix **`/our-`**, for example: `/our-hello`.
 
 ---
 
-## Current Skills — v0.0.3 (36 Skills)
+## Current Skills
 
-> 👉 For full descriptions and sources of each skill, see **[SKILLS.md](SKILLS.md)**.
+> Current version → **[VERSION](VERSION)** · full catalog + skill count → **[SKILLS.md](SKILLS.md)**.
+> (Version lives only in `VERSION`; the count lives only in the SKILLS.md heading — no duplicated numbers to drift.)
 
 **our-code-* — Code Quality**
 `/our-code-debug` · `/our-code-review` · `/our-code-postmortem` · `/our-code-tdd` · `/our-code-audit-arch` · `/our-code-onboard`
@@ -28,7 +29,7 @@ All skills are called via the prefix **`/our-`**, for example: `/our-hello`.
 `/our-prod-prompting` · `/our-prod-pattern` · `/our-prod-context` · `/our-prod-adr` · `/our-prod-mgmt` · `/our-prod-focus` · `/our-prod-grill` · `/our-prod-cheer`
 
 **our-skill-* / utility**
-`/our-skill-update` · `/our-skill-uninstall` · `/our-skill-autoread` · `/our-skill-expert` · `/our-hello`
+`/our-skill-update` · `/our-skill-uninstall` · `/our-skill-autoread` · `/our-skill-expert` · `/our-skill-doctor` · `/our-hello`
 
 ---
 
@@ -109,6 +110,8 @@ never deletes or overwrites a machine's own advanced skills.
 | Specific manual update (modified/new/deleted skills) | **B** (Incremental) | Modify **only** the changed skills, leaving other skills untouched. |
 
 > 💡 The recursive cleanup based on `name:` (Phase A, Step 2) is **only used during onboarding/first-time install** to clean up old legacy files. Once onboarding is complete, all skills will reside in standard `our-<name>` folders, so subsequent updates can use **Phase B** directly to overwrite folders, without needing recursive lookup.
+>
+> ℹ️ **How `/our-skill-update` actually behaves:** it performs a **clean reinstall every run** — deletes every installed `our-*` (except the protected `our-adv-*`) and copies the release set back. This means **added, removed, and renamed skills are all handled automatically** in one step; you never need a manual Phase A just because skills were renamed. **Phase B** below is an *optional manual optimization* for an agent applying a single targeted change without a full reinstall — the automated update does not rely on it.
 
 ### A. First-Time Installation / Onboarding a New Machine — *One-time per machine* (Clean Slate)
 

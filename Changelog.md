@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- `/our-skill-doctor`: health-check the install (frontmatter integrity, folder↔`name:` match, duplicate names, tier inventory, both-tools-in-sync) and, when run inside the repo, verify catalog↔folders↔version consistency — catches the stale-count / stale-version class of bug before release.
+- `.gitattributes` (`* text=auto eol=lf`) to normalize line endings to LF across Windows/macOS/Linux and stop spurious CRLF diffs.
+
+### Changed
+- **Single-source version/count:** removed the hardcoded version from the README and SKILLS.md headers — `VERSION` is now the only version source and the SKILLS.md "Skill List (N)" heading the only count, so they can't drift apart.
+
+### Fixed
+- Corrected the docs that claimed renames require a manual Phase A on consumer machines. `/our-skill-update` already clean-reinstalls every run (deleting all `our-*` except `our-adv-*`), so added/removed/renamed skills are handled automatically; clarified that Phase B is an optional manual optimization the automated update does not use. (README, SKILLS.md, Changelog 0.0.3 migration note.)
+
 ## [0.0.3] - 2026-06-24
 
 ### Changed (skill naming system overhaul)
@@ -49,10 +59,10 @@ command itself signals the category. `our-skill-*`, `our-hello`, and
 | `our-cheer` | `our-prod-cheer` | prod |
 | `our-stack-expert` | `our-skill-expert` | skill |
 
-> ⚠️ **Migration note for consumer machines:** rename = old `our-*` folders become
-> orphans that `/our-skill-update` won't clean up automatically (it only installs
-> new names). Phase A (clean slate) is required on each machine after this release
-> to remove the old names and install the new ones cleanly.
+> **Migration note:** renames are handled automatically. `/our-skill-update`
+> deletes every installed `our-*` (except the protected `our-adv-*`) and reinstalls
+> from the release in one step — so old names are removed and new ones installed
+> without any special Phase A. `our-adv-*` machine-local skills are untouched.
 
 ## [0.0.2] - 2026-06-23
 
