@@ -15,20 +15,20 @@ All skills are called via the prefix **`/our-`**, for example: `/our-hello`.
 
 > 👉 For full descriptions and sources of each skill, see **[SKILLS.md](SKILLS.md)**.
 
-**setup — Project Setup**
-`/our-add-auth` · `/our-add-docker` · `/our-setup-ci` · `/our-db-design` · `/our-ui-stack` · `/our-secrets`
+**our-code-* — Code Quality**
+`/our-code-debug` · `/our-code-review` · `/our-code-postmortem` · `/our-code-tdd` · `/our-code-audit-arch` · `/our-code-onboard`
 
-**fullstack — Development**
-`/our-write-tests` · `/our-commit-msg` · `/our-create-pr` · `/our-audit-security` · `/our-update-npm` · `/our-css-to-tailwind` · `/our-api-design` · `/our-error-handling` · `/our-audit-perf` · `/our-e2e-tests` · `/our-sql-optimize`
+**our-dev-* — Fullstack Development**
+`/our-dev-tests` · `/our-dev-e2e` · `/our-dev-commit` · `/our-dev-pr` · `/our-dev-api` · `/our-dev-errors` · `/our-dev-sql` · `/our-dev-tailwind` · `/our-dev-npm` · `/our-dev-perf` · `/our-dev-security`
 
-**engineering — Debugging / Code Review / Comprehension**
-`/our-debug` · `/our-postmortem` · `/our-review` · `/our-onboard-codebase` · `/our-test-driven` · `/our-audit-arch`
+**our-setup-* — Project Setup**
+`/our-setup-auth` · `/our-setup-docker` · `/our-setup-ci` · `/our-setup-db` · `/our-setup-ui` · `/our-setup-secrets`
 
-**self-dev / productivity — Self-improvement / Productivity**
-`/our-prompting` · `/our-skill-from-pattern` · `/our-save-context` · `/our-adr` · `/our-mgmt-rewrite` · `/our-stay-on-track`
+**our-prod-* — Productivity & Self-development**
+`/our-prod-prompting` · `/our-prod-pattern` · `/our-prod-context` · `/our-prod-adr` · `/our-prod-mgmt` · `/our-prod-focus` · `/our-prod-grill` · `/our-prod-cheer`
 
-**planning / motivation / utility**
-`/our-grill-me` · `/our-cheer` · `/our-hello` · `/our-skill-update` · `/our-skill-uninstall` · `/our-skill-autoread` · `/our-stack-expert`
+**our-skill-* / utility**
+`/our-skill-update` · `/our-skill-uninstall` · `/our-skill-autoread` · `/our-skill-expert` · `/our-hello`
 
 ---
 
