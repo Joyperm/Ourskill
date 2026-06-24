@@ -10,7 +10,7 @@ For installation/update instructions, see [README.md](README.md) ("Instructions 
 
 ---
 
-## Skill List (34)
+## Skill List (36)
 
 | Command | What it does | Category | Source |
 |---------|--------------|----------|--------|
@@ -20,6 +20,8 @@ For installation/update instructions, see [README.md](README.md) ("Instructions 
 | `/our-debug` | 4-step debugging discipline: reproduce → trace → falsify → cross-reference | engineering | 9arm-skills |
 | `/our-postmortem` | Write a Root Cause Analysis (RCA) / post-mortem after fixing a bug | engineering | 9arm-skills |
 | `/our-review` | Review a plan/PR/code from an outsider's perspective — question intent + trace code paths | engineering | 9arm-skills |
+| `/our-test-driven` | TDD discipline — red-green-refactor: write a failing test first, minimum code to pass, then refactor (test-first, unlike /our-write-tests) | engineering | local |
+| `/our-audit-arch` | Scan the whole codebase for architecture drift (coupling, layering, circular deps, god files, duplication) → prioritized refactor report | engineering | local |
 | `/our-onboard-codebase` | Run a parallel exploration subagent to map architecture/data/APIs/auth/deployment → produce onboarding doc | engineering | spencerpauly |
 | `/our-mgmt-rewrite` | Rewrite engineering updates/reports for executives/management, tailored for the channel | productivity | 9arm-skills |
 | `/our-stay-on-track` | Prevent looping on long tasks + manage context budget + hand off before context is full | productivity | 9arm-skills |

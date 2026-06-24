@@ -13,7 +13,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - **Machine-local `our-adv-*` tier**: a protected namespace for advanced, machine-specific skills (e.g. stack experts) that are created on one machine, never pushed, and **never touched** by `/our-skill-update` or `/our-skill-uninstall`. The recursive sweep (Phase A, update, uninstall) now skips any `name:` starting with `our-adv-`. `/our-skill-autoread` includes them and prefers them when they match a task more tightly. Documented under "Skill Tiers" in README.
-- `/our-stack-expert`: generator skill that builds a machine-local `our-adv-<stack>` expert (pull from a known source repo if one exists, else generate self-contained), installs it locally only, and never adds it to the shared catalog or pushes it — total 34 skills.
+- `/our-stack-expert`: generator skill that builds a machine-local `our-adv-<stack>` expert (pull from a known source repo if one exists, else generate self-contained), installs it locally only, and never adds it to the shared catalog or pushes it.
+- `/our-test-driven`: TDD discipline (red-green-refactor / test-first), kept distinct from `/our-write-tests` (test-after) and `/our-debug` (bug fixing).
+- `/our-audit-arch`: whole-codebase architecture-drift audit (coupling, layering, circular deps, god files, duplication) producing a prioritized refactor report; distinct from `/our-review` (diff) and `/our-onboard-codebase` (mapping). Inspired by ideas in `mattpocock/skills`. Total 36 skills.
 - `/our-prompting`: merged a **Named Frameworks** reference (16 frameworks — RTF, CO-STAR, RISE, APE, CRAFT, GRADE, etc.) with a selection matrix and how-to-pick guide, so all prompt guidance lives in one skill (single source of truth). The standalone draft was dropped.
 - **Secrets safety** notes in secret/API-sensitive skills (`/our-secrets`, `/our-add-auth`, `/our-setup-ci`, `/our-add-docker`, `/our-audit-security`): warn the user and confirm `.env`/secrets handling before acting; never print or commit real values.
 
