@@ -64,6 +64,7 @@ Add new rows to the bottom of the table using this format:
 
 ## Versions & Sources
 
+**v0.0.4** — `/our-skill-doctor` health-check; `.gitattributes` (eol=lf); single-source version/count; Phase A/B doc fixes. 37 skills
 **v0.0.3** — Full skill rename to `our-<category>-<action>` pattern (our-code-*, our-dev-*, our-setup-*, our-prod-*); renames applied automatically by `/our-skill-update`
 **v0.0.2** — `our-adv-*` machine-local tier + `/our-skill-expert`, `/our-code-tdd`, `/our-code-audit-arch`; prompting frameworks merge; secrets-safety notes; audit fixes
 **v0.0.1** — Initial gathering set

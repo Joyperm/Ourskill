@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.4] - 2026-06-24
+
 ### Added
 - `/our-skill-doctor`: health-check the install (frontmatter integrity, folder↔`name:` match, duplicate names, tier inventory, both-tools-in-sync) and, when run inside the repo, verify catalog↔folders↔version consistency — catches the stale-count / stale-version class of bug before release.
 - `.gitattributes` (`* text=auto eol=lf`) to normalize line endings to LF across Windows/macOS/Linux and stop spurious CRLF diffs.
